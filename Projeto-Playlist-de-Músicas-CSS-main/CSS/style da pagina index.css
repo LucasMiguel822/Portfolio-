@@ -1,0 +1,108 @@
+/* Configurações Gerais e Modo Escuro */
+body {
+    background-color: #121212; /* Fundo escuro clássico */
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Posicionamento do Logo/Texto Etec */
+.Etec {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #b3b3b3;
+}
+
+/* Container dos Perfis */
+.perfils {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Card de Cada Perfil */
+.perfil.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Efeito de Zoom Suave ao passar o mouse no card */
+.perfil.card:hover {
+    transform: scale(1.08);
+}
+
+/* Avatar Circular */
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Detalhe: Quando passar o mouse no card, o avatar ganha uma borda discreta */
+.perfil.card:hover .avatar {
+    border-color: #ffffff;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nome do Perfil */
+.perfil.card span {
+    color: #b3b3b3;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Nome do perfil acende em branco no hover */
+.perfil.card:hover span {
+    color: #ffffff;
+}
+
+/* Barra Inferior (Footer) */
+.footer-barra {
+    background-color: #000000;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #727272;
+    font-size: 0.85rem;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+}
